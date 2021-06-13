@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生管理系统</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./turnPage/turnPage.css">
+</head>
+
+<body>
+</body>
+<header>
+    <img src="./logo.png" alt="">
+    <h1 class="title">渡一教育</h1>
+    <div class="account_info">
+        <div class="login">
+
+        </div>
+        <div class="unlogin">
+
+        </div>
+    </div>
+</header>
+<div class="student-content">
+    <div class="left-content">
+        <dl>
+            <dt>学生管理</dt>
+            <dd data-class="student-list" class="active">学生列表</dd>
+            <dd data-class="add-student">新增学生</dd>
+        </dl>
+    </div>
+    <div class="right-content">
+        <div class="student-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>邮箱</th>
+                        <th>学号</th>
+                        <th>年龄</th>
+                        <th>手机号</th>
+                        <th>住址</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>lee</td>
+                        <td>男</td>
+                        <td>lee-reidno@163.com</td>
+                        <td>201919201</td>
+                        <td>12</td>
+                        <td>13122121221</td>
+                        <td>天津市</td>
+                        <td>
+                            <button class="edit btn">编辑</button>
+                            <button class="delete btn">删除</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+            <div class="turn_page"></div>
+        </div>
+        <div class="add-student hide">
+            <form id="add-student-form">
+                <div><label for="#name">姓名</label><input type="text" id="name" name="name"></div>
+                <div><label for="">性别</label>
+                    <input type="radio" id="male" name="sex" checked value=0>
+                    <label for="#male" class="gender">男</label>
+                    <input type="radio" id="female" name="sex" value=1>
+                    <label for="#female" class="gender">女</label>
+                </div>
+                <div><label for="#email">邮箱</label><input id="email" type="text" name="email"></div>
+                <div><label for="#sNo">学号</label><input type="text" id="sNo" name="sNo"></div>
+                <div><label for="#birth">出生年</label><input type="text" id="birth" name="birth"></div>
+                <div><label for="#phone">手机号</label><input type="text" id="phone" name="phone"></div>
+                <div><label for="#address">住址</label><input type="text" id="address" name="address"></div>
+                <div>
+                    <label for=""></label>
+                    <input type="submit">
+                    <input type="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="dialog hide">
+        <div class="dialog-content">
+            <h2>
+                编辑信息
+            </h2>
+
+            <form id="edit-student-form">
+                <div><label for="#edit-name">姓名</label><input type="text" id="edit-name" name="name"></div>
+                <div><label for="">性别</label>
+                    <input type="radio" id="edit-male" name="sex" checked value=0>
+                    <label for="#edit-male" class="gender">男</label>
+                    <input type="radio" id="edit-female" name="sex" value=1>
+                    <label for="#edit-female" class="gender">女</label>
+                </div>
+                <div><label for="#edit-email">邮箱</label><input id="edit-email" type="text" name="email"></div>
+                <div><label for="#edit-sNo">学号</label><input type="text" id="edit-sNo" name="sNo" readonly></div>
+                <div><label for="#edit-birth">出生年</label><input type="text" id="edit-birth" name="birth"></div>
+                <div><label for="#edit-phone">手机号</label><input type="text" id="edit-phone" name="phone"></div>
+                <div><label for="#edit-address">住址</label><input type="text" id="edit-address" name="address"></div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="./jquery.js"></script>
+<script src="./turnPage/turnpage.js"></script>
+<script src="index.js"></script>
+
+</html>

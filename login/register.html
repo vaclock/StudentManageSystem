@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./register.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="register">
+        <div class="title">
+            <h1>学生信息管理系统登录</h1>
+        </div>
+        <form action="">
+            <div class="info">
+                <div class="acc">
+                    <label for="#account">账号</label>
+                    <input type="text" id="account">
+                </div>
+                <div class="user">
+                    <label for="#username">用户名</label>
+                    <input type="text" id="username">
+                </div>
+            </div>
+            <div class="password">
+                <div class="pass_w">
+                    <label for="#password">密码</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="confirm_pass">
+                    <label for="#rePassword">确认密码</label>
+                    <input type="password" id="rePassword">
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit" id="register" value="confirm">
+            </div>
+        </form>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+        $('#register').on('click', function (e) {
+            e.preventDefault() || (e.returnValue = false);
+            $.ajax({
+                url: 'http://open.duyiedu.com/api/student/stuRegister',
+                method: 'post',
+                dataType: 'json',
+                data: {
+                    account: $('#account').val(),
+                    username: $('#username').val(),
+                    password: $('#password').val(),
+                    rePassword: $('#rePassword').val(),
+                    appkey: 'Sugela_vac_1602512224562'
+                },
+                success: function (rt) {
+                    if (rt.status === 'success') {
+                        alert('注册成功,请登录!');
+                        location.href = "./login.html"
+                    } else {
+                        alert(rt.msg);
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

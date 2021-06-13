@@ -1,0 +1,40 @@
+html, body{
+    height:100%;
+    margin:0px;
+}
+body{
+    background-image: url(./sky.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.login{
+    width:400px;
+    height:300px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .1);
+    padding-top:20px;
+    border-radius: 10px;
+}
+.login label{
+    width:50px;
+    display: inline-block;
+    text-align: right;
+}
+.login .password{
+    margin-top:20px;
+}
+.login .btn{
+    margin-top:20px;
+    text-align: center;
+    height:30px;
+}
+.login .btn input{
+    width:80px;
+}
+.login .btn input:nth-child(1) {
+    margin-left:50px;
+}
