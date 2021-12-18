@@ -1,0 +1,22 @@
+body{
+    margin:0px;
+    overflow:hidden;
+}
+div {
+    margin-top: 100px;
+}
+canvas{
+    background-color: #000;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+.img {
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}

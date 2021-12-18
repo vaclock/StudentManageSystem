@@ -1,4 +1,0 @@
-# StudentManageSystem
-使用jQuery写的简易版的学生管理系统
-
-> 需要使用http协议打开，github配置的静态页面默认是https协议的，请求后端学生数据接口的时候会产生跨域问题
